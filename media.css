@@ -1,0 +1,74 @@
+/* Responsive Styles */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+
+    .mobile-menu-button {
+      display: flex;
+    }
+
+    .nav-container {
+      height: 70px;
+    }
+
+    .logo {
+      height: 120px;
+    }
+
+    .hero-container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .hero-visual {
+      order: -1;
+      height: 250px;
+    }
+
+    .hero-blood-drops {
+      width: 200px;
+      height: 200px;
+    }
+
+    .hero-stats {
+      justify-content: center;
+    }
+
+    .hero-cta {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .about-content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .about-card {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .floating-element {
+      display: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-section {
+      min-height: 70vh;
+    }
+
+    .hero-cta {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-btn-primary,
+    .hero-btn-secondary {
+      width: 100%;
+      justify-content: center;
+    }
+  }
