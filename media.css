@@ -9,7 +9,7 @@
     }
 
     .hero-container {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 1.5rem;
     }
 
@@ -32,12 +32,11 @@
     }
 
     .about-content {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 2rem;
     }
 
     .about-card {
-      flex-direction: column;
       text-align: center;
     }
 
@@ -185,6 +184,17 @@
         font-weight: bold;
     }
     .stats-item {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .goals-section {
+        padding: 2rem 1rem;
+    }
+    .goals-section h2 {
+        font-size: 1.5rem;
+    }
+    .goal-card {
         padding: 1rem;
         font-size: 0.9rem;
     }

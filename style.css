@@ -655,10 +655,10 @@ body {
 }
 
 .tracker-section {
+  background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100% );
     padding: 6rem 2rem;
     margin: 0 auto;
-    /* border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); */
+    border-radius: 20px;
 }
 
 .tracker-content {
@@ -796,3 +796,76 @@ body {
 .pulse-animation {
     animation: heartbeat 1.5s ease-in-out infinite;
 }
+
+/* Goals Section */
+        .goals-section {
+            background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 50%, #e6f2ff 100%);
+            padding: 6rem 2rem;
+        }
+
+        .goals-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .goals-content h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .goal-card {
+            background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            gap: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .goal-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #e6f2ff;
+        }
+
+        .goal-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .goal-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #002c5f, #0056b3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .goal-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .goal-label {
+            font-size: 1  rem;
+            color: var(--text-secondary);
+        }
