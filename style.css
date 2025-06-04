@@ -1,21 +1,23 @@
-/* :root {
-            --primary: #0f172a;
-            --secondary: #1e293b;
-            --accent: #ef4444;
-            --accent-light: #fca5a5;
-            --success: #10b981;
-            --bg-primary: #ffffff;
-            --bg-secondary: #f8fafc;
-            --bg-dark: #0f172a;
-            --text-primary: #1e293b;
-            --text-secondary: #64748b;
-            --glass-bg: rgba(255, 255, 255, 0.1);
-            --glass-border: rgba(255, 255, 255, 0.2);
-        } */
+/* Root styles specifically for the tracker section */
+:root {
+    --primary: #002c5f;
+    --secondary: #0056b3;
+    --accent: #CD1C18;
+    --accent-light: #e63946;
+    --success: #10b981;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f0f8ff;
+    --bg-tertiary: #e6f2ff;
+    --bg-dark: #002c5f;
+    --text-primary: #002c5f;
+    --text-secondary: #555;
+}
 
 body {
-  background-color: #e6f2ff;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e6f2ff;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -169,6 +171,7 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
+    text-align: center;
   }
 
   .mobile-nav-link {
@@ -614,142 +617,181 @@ body {
     50% { transform: translateY(-20px) rotate(-45deg); }
   }
 
+/* TRACKER SECTION */
 
-  /* Tracker Section */
-        /* .tracker-section {
-            padding: 6rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
 
-        .tracker-content {
-            text-align: center;
-            color: #333;
-            margin-bottom: 4rem;
-        }
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    color: white;
+    box-shadow: 0 10px 30px rgba(205, 28, 24, 0.3);
+}
 
-        .tracker-content h2 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            background: #002c5f;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(205, 28, 24, 0.4);
+}
 
-        .donation-interactive {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
+.btn-secondary {
+    background: rgba(0, 44, 95, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(0, 44, 95, 0.2);
+    backdrop-filter: blur(10px);
+}
 
-        .blood-drop {
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, var(--accent) 0%, #dc2626 100%);
-            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            box-shadow: 0 10px 30px rgba(239, 68, 68, 0.3);
-        }
+.btn-secondary:hover {
+    background: rgba(0, 44, 95, 0.2);
+    transform: translateY(-2px);
+}
 
-        .blood-drop:hover {
-            transform: scale(1.1);
-            box-shadow: 0 15px 40px rgba(239, 68, 68, 0.5);
-        }
+.tracker-section {
+    padding: 6rem 2rem;
+    margin: 0 auto;
+    /* border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); */
+}
 
-        .blood-drop::before {
-            content: '';
-            position: absolute;
-            top: -5px;
-            left: -5px;
-            right: -5px;
-            bottom: -5px;
-            background: linear-gradient(45deg, var(--accent), #dc2626, var(--accent));
-            border-radius: inherit;
-            z-index: -1;
-            animation: pulse-ring 2s infinite;
-            opacity: 0.7;
-        }
+.tracker-content {
+    text-align: center;
+    color: var(--text-primary);
+    margin-bottom: 4rem;
+}
 
-        @keyframes pulse-ring {
-            0% { transform: scale(1); opacity: 0.7; }
-            50% { transform: scale(1.1); opacity: 0.3; }
-            100% { transform: scale(1); opacity: 0.7; }
-        }
+.tracker-content h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
 
-        .blood-drop i {
-            font-size: 2rem;
-            color: white;
-        }
+.donation-interactive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
 
-        .btn {
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-        }
+.blood-drop-tracker {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(205, 28, 24, 0.3);
+}
 
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-        }
+.blood-drop-tracker:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(205, 28, 24, 0.5);
+}
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
+.blood-drop-tracker::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, var(--accent), var(--accent-light), var(--accent));
+    border-radius: inherit;
+    z-index: -1;
+    animation: pulse-ring 2s infinite;
+    opacity: 0.7;
+}
 
-        .stat-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            padding: 2rem;
-            text-align: center;
-            color: #dc2626;
-            transition: all 0.3s ease;
-        }
+@keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.1); opacity: 0.3; }
+    100% { transform: scale(1); opacity: 0.7; }
+}
 
-        .stat-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.15);
-        }
+.blood-drop-tracker i {
+    font-size: 2rem;
+    color: white;
+}
 
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--accent-light);
-            margin-bottom: 0.5rem;
-            transition: all 0.3s ease;
-        }
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
 
-        .stat-number.animate {
-            transform: scale(1.2);
-            color: var(--accent);
-        }
+.stat-card {
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-primary);
+}
 
-        .stat-label {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        } */
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    background: var(--accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.stat-number.animate {
+    transform: scale(1.2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    opacity: 0.9;
+}
+
+
+/* Scroll animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Additional floating animations for consistency */
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1.2); }
+    75% { transform: scale(1.1); }
+}
+
+.pulse-animation {
+    animation: heartbeat 1.5s ease-in-out infinite;
+}

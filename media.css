@@ -1,6 +1,53 @@
 /* Responsive Styles */
+@media (max-width: 1200px) {
+    .nav-container {
+      height: 80px;
+    }
+
+    .logo {
+      height: 140px;
+    }
+
+    .hero-container {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .hero-visual {
+      height: 300px;
+    }
+
+    .hero-blood-drops {
+      width: 250px;
+      height: 250px;
+    }
+
+    .hero-stats {
+      justify-content: center;
+    }
+
+    .hero-cta {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .about-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .about-card {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .floating-element {
+      display: none;
+    }
+  }
+
   @media (max-width: 768px) {
-    .nav-links {
+        .nav-links {
       display: none;
     }
 
@@ -54,11 +101,47 @@
     .floating-element {
       display: none;
     }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tracker-content h2 {
+        font-size: 2rem;
+    }
+
+    .tracker-section {
+        padding: 4rem 1rem;
+        margin: 1rem;
+    }
   }
 
   @media (max-width: 480px) {
-    .hero-section {
-      min-height: 70vh;
+    .nav-container {
+      height: 60px;
+    }
+
+    .logo {
+      height: 120px;
+    }
+
+    .hero-container {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .hero-visual {
+      height: 200px;
+    }
+
+    .hero-blood-drops {
+      width: 150px;
+      height: 150px;
+    }
+
+    .hero-stats {
+      flex-direction: column;
+      align-items: center;
     }
 
     .hero-cta {
@@ -66,9 +149,32 @@
       align-items: center;
     }
 
-    .hero-btn-primary,
-    .hero-btn-secondary {
-      width: 100%;
-      justify-content: center;
+    .about-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .about-card {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .floating-element {
+      display: none;
+    }
+
+    .tracker-content h2 {
+        font-size: 1.5rem;
+    }
+    .tracker-section {
+        padding: 2rem 1rem;
+        margin: 0.5rem;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    .stats-item {
+        padding: 1rem;
+        font-size: 0.9rem;
     }
   }
