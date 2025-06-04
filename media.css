@@ -135,8 +135,8 @@
     }
 
     .hero-blood-drops {
-      width: 150px;
-      height: 150px;
+      width: 200px;
+      height: 200px;
     }
 
     .hero-stats {
@@ -159,6 +159,13 @@
       text-align: center;
     }
 
+    .about-icon {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 1rem;
+      align-items: center;
+    }
+
     .floating-element {
       display: none;
     }
@@ -171,7 +178,11 @@
         margin: 0.5rem;
     }
     .stats-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+    .stat-label {
+        font-size: 0.8rem;
+        font-weight: bold;
     }
     .stats-item {
         padding: 1rem;

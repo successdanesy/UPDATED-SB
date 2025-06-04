@@ -769,6 +769,7 @@ body {
     font-size: 1.1rem;
     color: var(--text-secondary);
     opacity: 0.9;
+    font-weight: bold;
 }
 
 
