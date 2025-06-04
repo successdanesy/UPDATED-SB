@@ -424,7 +424,6 @@ body {
 
   /* ABOUT SECTION STYLES */
   .about-section {
-     background: linear-gradient(135deg, #ffffff 0% , #f0f8ff 80%, #e6f2ff 100% );
     padding: 5rem 1rem;
     position: relative;
   }
@@ -655,7 +654,6 @@ body {
 }
 
 .tracker-section {
-  background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100% );
     padding: 6rem 2rem;
     margin: 0 auto;
     border-radius: 20px;
@@ -797,26 +795,25 @@ body {
     animation: heartbeat 1.5s ease-in-out infinite;
 }
 
-/* Goals Section */
-        .goals-section {
-            background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 50%, #e6f2ff 100%);
+/* Goal Section */
+        .goal-section {
             padding: 6rem 2rem;
         }
 
-        .goals-content {
+        .goal-content {
             max-width: 1200px;
             margin: 0 auto;
             text-align: center;
         }
 
-        .goals-content h2 {
-            font-size: 3rem;
+        .goal-content h2 {
+            font-size: 2.5rem;
             font-weight: 800;
             margin-bottom: 3rem;
             color: var(--primary);
         }
 
-        .goals-grid {
+        .goal-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
@@ -868,4 +865,148 @@ body {
         .goal-label {
             font-size: 1  rem;
             color: var(--text-secondary);
+        }
+
+        
+        /* Info Cards Section */
+.info-cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 1rem;
+  /* background-color: #f8fbff; */
+}
+
+/* Each Card */
+.info-card {
+  background: #f8fbff;
+  opacity: 1;
+  border-left-width: 1px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-radius: 15px;
+  border-color: #f2e9f0;
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
+  padding: 2rem;
+  max-width: 320px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-10px);
+}
+
+.info-svg {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  justify-self: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.info-card h1 {
+  font-size: 1.5rem;
+  color: #002c5f;
+  margin-bottom: 0.75rem;
+}
+
+.info-card p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* CTA Section */
+        .cta-section {
+            padding: 6rem 2rem;
+            text-align: center;
+            color: #002c5f;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+        }
+
+        .cta-content p {
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        /* Contact Form */
+        .contact-section {
+            padding: 6rem 2rem;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-content h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            color: var(--primary);
+        }
+
+        .contact-content p {
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .contact-form {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            margin-top: 3rem;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
         }
