@@ -17,13 +17,12 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #e6f2ff;
+  background: linear-gradient(135deg, #e6f2ff 0%, #f0f8ff 50%, #ffffff 100%);
   font-family: 'Poppins', sans-serif;
 }
 
 /* Enhanced Header Styles */
   .header {
-    background: linear-gradient(135deg, #e6f2ff 0%, #f0f8ff 100%);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(0, 44, 95, 0.1);
     position: sticky;
@@ -216,7 +215,6 @@ body {
 
 /* HERO SECTION STYLES */
   .hero-section {
-    background: linear-gradient(135deg, #e6f2ff 0%, #f0f8ff 50%, #ffffff 100%);
     min-height: 90vh;
     display: flex;
     align-items: center;
@@ -654,14 +652,11 @@ body {
 }
 
 .tracker-section {
-    padding: 6rem 2rem;
     margin: 0 auto;
-    border-radius: 20px;
 }
 
 .tracker-content {
     text-align: center;
-    color: var(--text-primary);
     margin-bottom: 4rem;
 }
 
@@ -839,7 +834,7 @@ body {
 
         .goal-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 20px 50px #00000026;
         }
 
         .goal-icon {
@@ -1010,3 +1005,41 @@ body {
             border-color: var(--accent);
             box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
         }
+
+        /* Footer */
+        .footer {
+  background-color: #2f2f2f;
+  color: #fff;
+  padding: 30px 20px 15px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-content p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffb347;
+  transform: scale(1.2);
+}
+
+.footer-note {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #bbb;
+}
