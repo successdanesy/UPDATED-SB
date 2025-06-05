@@ -42,17 +42,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
         // TRACKER Blood drop interaction
-        let pints = 0;
         const bloodDrop = document.getElementById('bloodDrop');
-        const resetBtn = document.getElementById('resetBtn');
-        const pintsCount = document.getElementById('pintsCount');
-        const livesCount = document.getElementById('livesCount');
-
-        function updateStats() {
-            const lives = pints * 3;
-            pintsCount.textContent = pints;
-            livesCount.textContent = lives;
-            
             // Add animation
             pintsCount.classList.add('animate');
             livesCount.classList.add('animate');
@@ -61,7 +51,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 pintsCount.classList.remove('animate');
                 livesCount.classList.remove('animate');
             }, 300);
-        }
+        
 
         bloodDrop.addEventListener('click', () => {
             pints++;
@@ -72,13 +62,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             setTimeout(() => {
                 bloodDrop.style.transform = 'scale(1)';
             }, 200);
-        });
-
-        resetBtn.addEventListener('click', () => {
-            if (pints > 0) {
-                pints--;
-                updateStats();
-            }
         });
 
         // Scroll animations
